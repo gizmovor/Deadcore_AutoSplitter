@@ -29,7 +29,7 @@ isLoading {
 }
 
 gameTime{
-	if(old.initialTime != current.initialTime && current.paused == 1){
+	if(current.initialTime!=old.initialTime && current.paused == 1 && timer.CurrentTime.GameTime > TimeSpan.FromSeconds(current.initialTime)){
 		return TimeSpan.FromSeconds(current.initialTime);
 	}
 }
